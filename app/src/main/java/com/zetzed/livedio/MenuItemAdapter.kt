@@ -1,4 +1,4 @@
-package com.zetzed.livedio
+ package com.zetzed.livedio
 
 import android.view.LayoutInflater
 import android.view.View
@@ -8,21 +8,8 @@ import androidx.recyclerview.widget.RecyclerView
 
 class MenuItemAdapter : RecyclerView.Adapter<MenuItemAdapter.MenuItemAdapterViewHolder>(){
 
-    //Cria subclasse
-    class MenuItemAdapterViewHolder(val itemView: View) :RecyclerView.ViewHolder(){
-        fun iniciaViews(item: MenuItemModel){ //Cria uma função e passa como parâmetro item a classe "MenuItem Model" que está no arquivo "MenuItemModel.kt".
-            item.titulo //Pega val "titulo" da classe "MenuItemModel" no arquivo "MenuItemModel.kt"
-        }
-    }
-
     //Cria Variavel que Acessa arquivo MenuItemModel.kt
     private val list = mutableListOf<MenuItemModel>() //Atributo de classe...Pega de classe  MenuItemModel
-
-    //Cria função setItensList que limpa a lista e adiciona tudo que tem de novo..para não duplicar itens
-    fun setItensList(Lista: List<MenuItemModel>){
-        this.list.clear() //Zera a lista
-        this.list.addAll(list) //Adiciona tudo
-    }
 
     //Declara o Layout de cada item da ViewHolder
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MenuItemAdapterViewHolder {
@@ -38,5 +25,18 @@ class MenuItemAdapter : RecyclerView.Adapter<MenuItemAdapter.MenuItemAdapterView
     // getItemCount = Verifica a quantidade de Itens de cada ViewHolder
     override fun getItemCount(): Int {
         return list.size
+    }
+
+    //Cria função setItensList que limpa a lista e adiciona tudo que tem de novo..para não duplicar itens
+    fun setItensList(Lista: List<MenuItemModel>){
+        this.list.clear() //Zera a lista
+        this.list.addAll(list) //Adi    ciona tudo
+    }
+
+    //Cria subclasse
+    class MenuItemAdapterViewHolder(val itemView: View) : RecyclerView.ViewHolder(itemView){
+        fun iniciaViews(item: MenuItemModel){ //Cria uma função e passa como parâmetro item a classe "MenuItem Model" que está no arquivo "MenuItemModel.kt".
+            //item.titulo //Pega val "titulo" da classe "MenuItemModel" no arquivo "MenuItemModel.kt"
+        }
     }
 }

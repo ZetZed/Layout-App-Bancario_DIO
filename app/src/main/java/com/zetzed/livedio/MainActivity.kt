@@ -16,6 +16,7 @@ class MainActivity : AppCompatActivity() {
 
         //Funções que inicia no onCreate
         iniciaViews()
+        setItemsLista()
     }
 
     private fun iniciaViews(){
