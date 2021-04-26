@@ -3,7 +3,6 @@
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.appcompat.view.menu.ActionMenuItemView
 import androidx.recyclerview.widget.RecyclerView
 
 class MenuItemAdapter : RecyclerView.Adapter<MenuItemAdapter.MenuItemAdapterViewHolder>(){
@@ -28,9 +27,9 @@ class MenuItemAdapter : RecyclerView.Adapter<MenuItemAdapter.MenuItemAdapterView
     }
 
     //Cria função setItensList que limpa a lista e adiciona tudo que tem de novo..para não duplicar itens
-    fun setItensList(Lista: List<MenuItemModel>){
+    fun setItensList(list: List<MenuItemModel>){
         this.list.clear() //Zera a lista
-        this.list.addAll(list) //Adi    ciona tudo
+        this.list.addAll(list) //Adiciona tudo
     }
 
     //Cria subclasse

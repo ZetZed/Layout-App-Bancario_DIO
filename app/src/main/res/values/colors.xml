@@ -8,4 +8,5 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="itau">#EB7000</color>
+    <color name="itau_strong">#C15C01</color>
 </resources>
