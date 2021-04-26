@@ -3,6 +3,7 @@
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
 class MenuItemAdapter : RecyclerView.Adapter<MenuItemAdapter.MenuItemAdapterViewHolder>(){
@@ -33,9 +34,14 @@ class MenuItemAdapter : RecyclerView.Adapter<MenuItemAdapter.MenuItemAdapterView
     }
 
     //Cria subclasse
-    class MenuItemAdapterViewHolder(val itemView: View) : RecyclerView.ViewHolder(itemView){
+    class MenuItemAdapterViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
+
+        private val tvTitle by lazy {
+            itemView.findViewById<TextView>(R.id.tv_title)
+        }
+
         fun iniciaViews(item: MenuItemModel){ //Cria uma função e passa como parâmetro item a classe "MenuItem Model" que está no arquivo "MenuItemModel.kt".
-            //item.titulo //Pega val "titulo" da classe "MenuItemModel" no arquivo "MenuItemModel.kt"
+            tvTitle.text = item.titulo
         }
     }
 }

@@ -9,4 +9,5 @@
     <color name="white">#FFFFFFFF</color>
     <color name="itau">#EB7000</color>
     <color name="itau_strong">#C15C01</color>
+    <color name="background">#EBEAE8</color>
 </resources>
