@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 
 class MainActivity : AppCompatActivity() {
 
+
     private lateinit var rvList: RecyclerView //lateinit = cria atributo de classe sem necessidade de inicializar ..Informando que pode ser null
     private var adapter = MenuItemAdapter() //Pega a classe MenuItemAdapter
 
@@ -50,6 +51,5 @@ class MainActivity : AppCompatActivity() {
                         )
                 )
         )
-
     }
 }

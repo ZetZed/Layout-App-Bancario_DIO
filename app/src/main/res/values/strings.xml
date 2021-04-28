@@ -4,4 +4,12 @@
     <string name="dispon_veis_para_voc">disponíveis para você</string>
     <string name="ol_zet">olá, Zet Zed</string>
     <string name="ag_3300_conta_009751">Ag: 7700 Conta: 009751</string>
+    <string name="coloca_a_imagem">Coloca a imagem</string>
+    <string name="cart_es">cartões</string>
+    <string name="in_cio">Início</string>
+    <string name="extrato">Extrato</string>
+    <string name="transa_es">Transações</string>
+    <string name="op_es">+ Opções</string>
+    <string name="ajuda">Ajuda</string>
+    <string name="imagem_selecionada_pelo_usu_rio">Imagem selecionada pelo usuário</string>
 </resources>

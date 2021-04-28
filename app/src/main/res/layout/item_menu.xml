@@ -13,11 +13,12 @@
         android:layout_height="100dp"
         android:padding="16dp">
 
+
         <TextView
             android:id="@+id/tv_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="cartões"
+            android:text="@string/cart_es"
             android:textStyle="bold"
             android:textColor="@color/black"
             android:textSize="16sp"

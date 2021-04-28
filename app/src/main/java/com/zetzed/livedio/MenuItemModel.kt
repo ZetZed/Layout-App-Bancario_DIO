@@ -1,8 +1,8 @@
 package com.zetzed.livedio
 
-class MenuItemModel (
+class MenuItemModel(
         val titulo: String
-        )
+)
 
 
 

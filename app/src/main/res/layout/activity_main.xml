@@ -21,19 +21,37 @@
             android:id="@+id/tv_usuario"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="88dp"
+            android:layout_marginLeft="88dp"
+            android:layout_marginTop="4dp"
             android:text="@string/ol_zet"
             android:textColor="@color/itau"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"/>
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/tv_conta"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="88dp"
+            android:layout_marginLeft="88dp"
             android:text="@string/ag_3300_conta_009751"
             android:textColor="@color/black"
-            app:layout_constraintTop_toBottomOf="@id/tv_usuario"
-            app:layout_constraintStart_toStartOf="parent"/>
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_usuario" />
+
+        <ImageButton
+            android:id="@+id/photo"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:scaleType="centerCrop"
+            tools:srcCompat="@tools:sample/avatars"
+            android:contentDescription="@string/imagem_selecionada_pelo_usu_rio"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -75,4 +93,137 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"/>
 
+    <ImageView
+        android:id="@+id/image_cartao"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="72dp"
+        android:layout_marginLeft="72dp"
+        android:layout_marginTop="192dp"
+        android:contentDescription="@string/coloca_a_imagem"
+        android:src="@drawable/cartao"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/image_comprovantes"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="280dp"
+        android:layout_marginLeft="280dp"
+        android:layout_marginTop="192dp"
+        android:contentDescription="@string/coloca_a_imagem"
+        android:src="@drawable/comprovantes"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/image_investimentos"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="120dp"
+        android:contentDescription="@string/coloca_a_imagem"
+        android:src="@drawable/investimentos"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/image_cartao" />
+
+    <ImageView
+        android:id="@+id/image_portabilidade"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="280dp"
+        android:layout_marginLeft="280dp"
+        android:layout_marginTop="120dp"
+        android:contentDescription="@string/coloca_a_imagem"
+        android:src="@drawable/portabilidade"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/image_comprovantes" />
+
+    <ImageView
+        android:id="@+id/image_poupanca"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="120dp"
+        android:contentDescription="@string/coloca_a_imagem"
+        android:src="@drawable/poupanca"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/image_investimentos" />
+
+    <ImageView
+        android:id="@+id/image_credito"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="280dp"
+        android:layout_marginLeft="280dp"
+        android:layout_marginTop="120dp"
+        android:contentDescription="@string/coloca_a_imagem"
+        android:src="@drawable/credito"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/image_portabilidade" />
+
+    <Button
+        android:id="@+id/button_inicio"
+        android:layout_width="72dp"
+        android:layout_height="49dp"
+        android:background="@color/itau"
+        android:text="@string/in_cio"
+        android:textColor="@color/white"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@id/rv_list"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="SmallSp"/>
+
+    <Button
+        android:id="@+id/button_extrato"
+        android:layout_width="72dp"
+        android:layout_height="49dp"
+        android:background="@color/itau"
+        android:text="@string/extrato"
+        android:textColor="@color/white"
+        android:textSize="10sp"
+        app:layout_constraintStart_toEndOf="@+id/button_inicio"
+        app:layout_constraintBottom_toBottomOf="@id/rv_list"
+        tools:ignore="SmallSp"/>
+
+    <Button
+        android:id="@+id/button_transacoes"
+        android:layout_width="72dp"
+        android:layout_height="49dp"
+        android:background="@color/itau"
+        android:text="@string/transa_es"
+        android:textColor="@color/white"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@id/rv_list"
+        app:layout_constraintStart_toEndOf="@+id/button_extrato"
+        tools:ignore="SmallSp"/>
+
+    <Button
+        android:id="@+id/button_opcoes"
+        android:layout_width="72dp"
+        android:layout_height="49dp"
+        android:background="@color/itau"
+        android:text="@string/op_es"
+        android:textColor="@color/white"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@id/rv_list"
+        app:layout_constraintStart_toEndOf="@+id/button_transacoes"
+        tools:ignore="SmallSp" />
+
+    <Button
+        android:id="@+id/button_ajuda"
+        android:layout_width="72dp"
+        android:layout_height="49dp"
+        android:background="@color/itau"
+        android:text="@string/ajuda"
+        android:textColor="@color/white"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@id/rv_list"
+        app:layout_constraintStart_toEndOf="@+id/button_opcoes"
+        tools:ignore="SmallSp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
+

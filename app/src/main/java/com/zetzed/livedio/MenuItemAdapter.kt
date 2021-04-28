@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class MenuItemAdapter : RecyclerView.Adapter<MenuItemAdapter.MenuItemAdapterViewHolder>(){
+ class MenuItemAdapter : RecyclerView.Adapter<MenuItemAdapter.MenuItemAdapterViewHolder>(){
 
     //Cria Variavel que Acessa arquivo MenuItemModel.kt
     private val list = mutableListOf<MenuItemModel>() //Atributo de classe...Pega de classe  MenuItemModel
@@ -16,6 +16,7 @@ class MenuItemAdapter : RecyclerView.Adapter<MenuItemAdapter.MenuItemAdapterView
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item_menu, parent, false)//Pega o contexto a partir do parent.".inflate" = criar micro layout pro adapter
         return MenuItemAdapterViewHolder(view)
     }
+
 
     override fun onBindViewHolder(holder: MenuItemAdapterViewHolder, position: Int) {
         holder.iniciaViews(list[position]) //Obtem a lista que está no "MenuItemModel.kt" através da fun "iniciaViews" e passa a posição da lista.
@@ -35,7 +36,6 @@ class MenuItemAdapter : RecyclerView.Adapter<MenuItemAdapter.MenuItemAdapterView
 
     //Cria subclasse
     class MenuItemAdapterViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
-
         private val tvTitle by lazy {
             itemView.findViewById<TextView>(R.id.tv_title)
         }
