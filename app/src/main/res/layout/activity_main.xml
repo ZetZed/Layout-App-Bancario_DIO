@@ -4,18 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:background="@color/background">
+    android:background="@color/background"
+    tools:context=".MainActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/cl_toolbar"
-        android:background="@color/white"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:background="@color/white"
         android:padding="12dp"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:id="@+id/tv_usuario"
@@ -47,11 +47,11 @@
             android:layout_marginStart="8dp"
             android:layout_marginLeft="8dp"
             android:layout_marginTop="8dp"
+            android:contentDescription="@string/imagem_selecionada_pelo_usu_rio"
+            android:scaleType="centerCrop"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:scaleType="centerCrop"
-            tools:srcCompat="@tools:sample/avatars"
-            android:contentDescription="@string/imagem_selecionada_pelo_usu_rio"/>
+            tools:srcCompat="@tools:sample/avatars" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -59,14 +59,14 @@
         android:id="@+id/tv_title"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="18dp"
         android:text="@string/nossos_serviços"
         android:textColor="@color/itau"
         android:textSize="26sp"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="18dp"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cl_toolbar"
-        android:layout_marginLeft="12dp" />
+        app:layout_constraintTop_toBottomOf="@+id/cl_toolbar" />
 
     <TextView
         android:id="@+id/tv_subtitle"
@@ -75,155 +75,84 @@
         android:text="@string/dispon_veis_para_voc"
         android:textColor="@color/black"
         android:textSize="26sp"
-        app:layout_constraintTop_toBottomOf="@+id/tv_title"
-        app:layout_constraintLeft_toLeftOf="@id/tv_title"/>
+        app:layout_constraintLeft_toLeftOf="@id/tv_title"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_list"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginTop="12dp"
         android:layout_marginStart="2dp"
+        android:layout_marginTop="12dp"
         android:layout_marginEnd="2dp"
-        app:spanCount="2"
         app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-        tools:listitem="@layout/item_menu"
-        app:layout_constraintTop_toBottomOf="@id/tv_subtitle"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"/>
-
-    <ImageView
-        android:id="@+id/image_cartao"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="72dp"
-        android:layout_marginLeft="72dp"
-        android:layout_marginTop="192dp"
-        android:contentDescription="@string/coloca_a_imagem"
-        android:src="@drawable/cartao"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/tv_subtitle"
+        app:spanCount="2"
+        tools:listitem="@layout/item_menu" />
 
-    <ImageView
-        android:id="@+id/image_comprovantes"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="280dp"
-        android:layout_marginLeft="280dp"
-        android:layout_marginTop="192dp"
-        android:contentDescription="@string/coloca_a_imagem"
-        android:src="@drawable/comprovantes"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_toolbar2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/itau_strong"
+        android:padding="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/rv_list">
 
-    <ImageView
-        android:id="@+id/image_investimentos"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="80dp"
-        android:layout_marginLeft="80dp"
-        android:layout_marginTop="120dp"
-        android:contentDescription="@string/coloca_a_imagem"
-        android:src="@drawable/investimentos"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/image_cartao" />
+        <Button
+            android:id="@+id/button_inicio"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/itau"
+            android:text="@string/in_cio"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toStarOf="@+id/button_extrato"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
 
-    <ImageView
-        android:id="@+id/image_portabilidade"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="280dp"
-        android:layout_marginLeft="280dp"
-        android:layout_marginTop="120dp"
-        android:contentDescription="@string/coloca_a_imagem"
-        android:src="@drawable/portabilidade"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/image_comprovantes" />
+        <Button
+            android:id="@+id/button_extrato"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/itau"
+            android:text="@string/extrato"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toStartOf="@+id/button_transacoes"
+            app:layout_constraintStart_toEndOf="@+id/button_inicio"
+            app:layout_constraintTop_toTopOf="parent"/>
 
-    <ImageView
-        android:id="@+id/image_poupanca"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="80dp"
-        android:layout_marginLeft="80dp"
-        android:layout_marginTop="120dp"
-        android:contentDescription="@string/coloca_a_imagem"
-        android:src="@drawable/poupanca"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/image_investimentos" />
+        <Button
+            android:id="@+id/button_transacoes"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/itau"
+            android:text="@string/transa_es"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toStartOf="@+id/button_ajuda"
+            app:layout_constraintStart_toEndOf="@+id/button_extrato"
+            app:layout_constraintTop_toTopOf="parent"/>
 
-    <ImageView
-        android:id="@+id/image_credito"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="280dp"
-        android:layout_marginLeft="280dp"
-        android:layout_marginTop="120dp"
-        android:contentDescription="@string/coloca_a_imagem"
-        android:src="@drawable/credito"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/image_portabilidade" />
+        <Button
+            android:id="@+id/button_ajuda"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/itau"
+            android:text="@string/ajuda"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/button_transacoes"
+            app:layout_constraintTop_toTopOf="parent"/>
 
-    <Button
-        android:id="@+id/button_inicio"
-        android:layout_width="72dp"
-        android:layout_height="49dp"
-        android:background="@color/itau"
-        android:text="@string/in_cio"
-        android:textColor="@color/white"
-        android:textSize="10sp"
-        app:layout_constraintBottom_toBottomOf="@id/rv_list"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="SmallSp"/>
-
-    <Button
-        android:id="@+id/button_extrato"
-        android:layout_width="72dp"
-        android:layout_height="49dp"
-        android:background="@color/itau"
-        android:text="@string/extrato"
-        android:textColor="@color/white"
-        android:textSize="10sp"
-        app:layout_constraintStart_toEndOf="@+id/button_inicio"
-        app:layout_constraintBottom_toBottomOf="@id/rv_list"
-        tools:ignore="SmallSp"/>
-
-    <Button
-        android:id="@+id/button_transacoes"
-        android:layout_width="72dp"
-        android:layout_height="49dp"
-        android:background="@color/itau"
-        android:text="@string/transa_es"
-        android:textColor="@color/white"
-        android:textSize="10sp"
-        app:layout_constraintBottom_toBottomOf="@id/rv_list"
-        app:layout_constraintStart_toEndOf="@+id/button_extrato"
-        tools:ignore="SmallSp"/>
-
-    <Button
-        android:id="@+id/button_opcoes"
-        android:layout_width="72dp"
-        android:layout_height="49dp"
-        android:background="@color/itau"
-        android:text="@string/op_es"
-        android:textColor="@color/white"
-        android:textSize="10sp"
-        app:layout_constraintBottom_toBottomOf="@id/rv_list"
-        app:layout_constraintStart_toEndOf="@+id/button_transacoes"
-        tools:ignore="SmallSp" />
-
-    <Button
-        android:id="@+id/button_ajuda"
-        android:layout_width="72dp"
-        android:layout_height="49dp"
-        android:background="@color/itau"
-        android:text="@string/ajuda"
-        android:textColor="@color/white"
-        android:textSize="10sp"
-        app:layout_constraintBottom_toBottomOf="@id/rv_list"
-        app:layout_constraintStart_toEndOf="@+id/button_opcoes"
-        tools:ignore="SmallSp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
