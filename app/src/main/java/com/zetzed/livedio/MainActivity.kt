@@ -7,16 +7,19 @@ import android.content.pm.PackageManager
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.ImageView
 import android.widget.Toast
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.item_menu.*
 
 class MainActivity : AppCompatActivity() {
 
 
     private lateinit var rvList: RecyclerView //lateinit = cria atributo de classe sem necessidade de inicializar ..Informando que pode ser null
     private var adapter = MenuItemAdapter() //Pega a classe MenuItemAdapter
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
