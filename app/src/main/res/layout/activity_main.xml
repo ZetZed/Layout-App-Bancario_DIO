@@ -9,8 +9,8 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/cl_toolbar"
-        android:layout_width="358dp"
-        android:layout_height="72dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:background="@color/white"
         android:padding="12dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -40,18 +40,17 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_usuario" />
 
-        <ImageButton
+        <ImageView
             android:id="@+id/photo"
-            android:layout_width="63dp"
-            android:layout_height="63dp"
-            android:layout_marginStart="0dp"
-            android:layout_marginLeft="0dp"
-            android:layout_marginTop="0dp"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginLeft="4dp"
             android:contentDescription="@string/imagem_selecionada_pelo_usu_rio"
             android:scaleType="centerCrop"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:src="@tools:sample/avatars" />
+            android:src="@drawable/photo" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -98,11 +97,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/itau_strong"
-        android:padding="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rv_list">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/rv_list"
+        app:layout_constraintVertical_bias="0.078">
 
         <Button
             android:id="@+id/button_inicio"
@@ -112,9 +110,8 @@
             android:text="@string/in_cio"
             android:textColor="@color/white"
             android:textSize="12sp"
-            app:layout_constraintEnd_toStarOf="@+id/button_extrato"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+            app:layout_constraintTop_toTopOf="parent" />
 
         <Button
             android:id="@+id/button_extrato"
@@ -126,7 +123,7 @@
             android:textSize="12sp"
             app:layout_constraintEnd_toStartOf="@+id/button_transacoes"
             app:layout_constraintStart_toEndOf="@+id/button_inicio"
-            app:layout_constraintTop_toTopOf="parent"/>
+            app:layout_constraintTop_toTopOf="parent" />
 
         <Button
             android:id="@+id/button_transacoes"
@@ -138,7 +135,7 @@
             android:textSize="12sp"
             app:layout_constraintEnd_toStartOf="@+id/button_ajuda"
             app:layout_constraintStart_toEndOf="@+id/button_extrato"
-            app:layout_constraintTop_toTopOf="parent"/>
+            app:layout_constraintTop_toTopOf="parent" />
 
         <Button
             android:id="@+id/button_ajuda"
@@ -150,7 +147,7 @@
             android:textSize="12sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/button_transacoes"
-            app:layout_constraintTop_toTopOf="parent"/>
+            app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
