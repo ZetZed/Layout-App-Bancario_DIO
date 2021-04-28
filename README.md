@@ -1,4 +1,4 @@
-# App-Bancario_DIO
+# App-Bancario_DIO 🏦 
 Olá a todos!👋 Comecei a estudar as linguagens Java e Kotlin com o propósito de aprender a criar aplicativos Android. 
 Este projeto foi disponibilizado pela plataforma Digital Innovation One em parceria com a empresa everis, lecionado pelo professor Igor Ferrani (everis).
 O projeto se trata em criar um aplicativo simples com uma interface de um aplicativo bancário(Itaú), usando o RecyclerView.
